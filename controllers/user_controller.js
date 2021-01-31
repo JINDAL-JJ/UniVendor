@@ -1,4 +1,7 @@
 const User = require('../models/user')
+const multer = require('multer');
+const path = require('path')
+const post = require('../models/post')
 
 module.exports.profile = function(req, res){
     return res.render('user_profile', {
@@ -25,7 +28,6 @@ module.exports.signUp = function(req, res) {
         title: "Sign Up"
     })
 }
-
 
 module.exports.create = function(req, res){
     // console.log(req.body)
@@ -57,4 +59,52 @@ module.exports.destroySession = function(req, res) {
     req.logout();
 
     return res.redirect('/');
+}
+
+
+//parth code  47 - 78
+// Set Storage engine 
+const storage =multer.diskStorage({
+    destination : '../assets/uploads/',
+    filename : function(req,file,cb){
+        cb(null,file.fieldname + '-' +Date.now() + path.extname(file.originalname));
+    }
+});
+
+const upload= multer({
+    storage : storage,
+    limits :{fileSize:1000000},
+    fileFilter:function(req,file,cb){
+        checkFileType(file,cb);
+    }
+}).single('myImage');
+
+//check file type
+function checkFileType(file, cb){
+    // Allowed ext
+    const filetypes = /jpeg|jpg|png|gif/;
+    // Check ext
+    const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+    // Check mime
+    const mimetype = filetypes.test(file.mimetype);
+  
+    if(mimetype && extname){
+      return cb(null,true);
+    } else {
+      cb('Error: Images Only!');
+    }
+  }
+
+
+module.exports.postUpload = function(req,res) {
+    upload(req,res,(err)=>{
+        // console.log(req.file)
+        var data= new post(req.file);
+         data.save().then(()=>{
+            // res.status(200).render('savealert.pug');
+              res.send("This item has been saved to database")
+          }).catch(()=>{
+              res.status(400).send("Item was not send to database")
+          });
+    })
 }
