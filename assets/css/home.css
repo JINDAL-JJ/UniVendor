@@ -1,3 +1,79 @@
-h1 {
-  color: red;
+.fl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.decor {
+  text-decoration: none;
+}
+.container1 {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.txt {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.text {
+  font-size: 4rem;
+  opacity: inherit();
+  opacity: inherit();
+}
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Contact Form CSS */
+
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(65, 76, 100, 0.05);
+  padding: 20px 0 30px 0;
+}
+
+.contact .info-box i {
+  font-size: 32px;
+  color: gray;
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px dotted #ffeeba;
+}
+
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.text-center-message {
+  display: inline;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.text-center-message:hover {
+  background-color: #ffce39;
 }
