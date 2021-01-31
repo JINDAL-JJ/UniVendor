@@ -1,0 +1,53 @@
+body {
+  background-image: url(../images/pexels-ann-h-1762851.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 20%;
+  left: 33%;
+  background-size: cover;
+  color: black;
+}
+.container h1 {
+  display: inline-block;
+  font-size: 45px;
+  border-bottom: 5px solid rgb(17, 174, 207);
+  margin-bottom: 24px;
+  padding: 13px 0px;
+  width: 50%;
+}
+
+.prop {
+  margin-top: 28px;
+}
+.here {
+  font-size: 20px;
+  margin-left: -19px;
+  margin-top: 13px;
+}
+
+.box input {
+  padding: 10px 21px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid rgb(17, 174, 207);
+  outline: none;
+  /* color: white; */
+  font-weight: bold;
+  font-family: "Libre Baskerville", serif;
+
+  /* To make it Transparent */
+  background: none;
+}
+.box i {
+  text-align: center;
+  width: 25px;
+}
+
+.btn-light-blue {
+  background-color: rgb(17, 174, 207);
+}

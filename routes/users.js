@@ -20,16 +20,4 @@ router.get('/sign-out', userController.destroySession);
 
 router.post('/createPost', userController.postUpload)
 
-// app.post('/upload',(req,res)=>{
-//     upload(req,res,(err)=>{
-//         var data= new FileUpload(req.file);
-//          data.save().then(()=>{
-//             // res.status(200).render('savealert.pug');
-//               res.send("This item has been saved to database")
-//           }).catch(()=>{
-//               res.status(400).send("Item was not send to database")
-//           });
-//     })
-// })
-
 module.exports = router; 

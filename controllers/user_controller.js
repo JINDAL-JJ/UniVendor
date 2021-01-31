@@ -22,7 +22,7 @@ module.exports.signIn = function(req, res) {
 module.exports.signUp = function(req, res) {
     if (req.isAuthenticated()) {
         return res.redirect('/users/profile');
-    }
+    } 
 
     return res.render('user_sign_up', {
         title: "Sign Up"
@@ -30,12 +30,14 @@ module.exports.signUp = function(req, res) {
 }
 
 module.exports.create = function(req, res){
-    // console.log(req.body)
+    console.log(req.body)
     if (req.body.password != req.body.confirm_password){
+        console.log('password mismatch')
         return res.redirect('back');
     }
 
     User.findOne({email: req.body.email}, function(err, user){
+        // console.log('going in db')
         if(err){console.log('error in finding user in signing up'); return}
 
         if (!user){
