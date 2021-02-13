@@ -65,6 +65,10 @@ $ git push -u origin BranchName
 Finally, go to your repository in the browser and click on `compare and pull requests`.
 Then add a title and description to your pull request that explains your precious effort.
 
+### Update Contribution.md
+
+Finally, if you are contributing to this project under CrossWOC,append your name, github ID link, issue solved along with its tags in "Contribution.md".
+
 ## Discord Server
 
 Join this server if you are contributing to this project under CrossWOC : https://discord.gg/bYGb6qxBxb
