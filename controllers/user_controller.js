@@ -147,18 +147,18 @@ function checkFileType(file, cb) {
   }
 }
 
-module.exports.postUpload = function (req, res) {
-  upload(req, res, (err) => {
-    // console.log(req.file)
-    var data = new post(req.file);
-    data
-      .save()
-      .then(() => {
-        // res.status(200).render('savealert.pug');
-        res.send("This item has been saved to database");
-      })
-      .catch(() => {
-        res.status(400).send("Item was not send to database");
-      });
-  });
-};
+// module.exports.postUpload = function (req, res) {
+//   upload(req, res, (err) => {
+//     // console.log(req.file)
+//     var data = new post(req.file);
+//     data
+//       .save()
+//       .then(() => {
+//         // res.status(200).render('savealert.pug');
+//         res.send("This item has been saved to database");
+//       })
+//       .catch(() => {
+//         res.status(400).send("Item was not send to database");
+//       });
+//   });
+// };

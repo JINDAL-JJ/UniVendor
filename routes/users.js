@@ -16,7 +16,7 @@ router.get('/showProductSellForm',passport.checkAuthentication, userController.s
 //Route: posting the new product for sell.
 router.post('/createPost', userController.createPost);
 
-router.post('/postUpload', userController.postUpload);
+// router.post('/postUpload', userController.postUpload);
 
 //use passport as middleware too authenticate
 router.post('/createSession',passport.authenticate(
