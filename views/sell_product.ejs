@@ -1,45 +1,40 @@
+<script src="https://kit.fontawesome.com/60f84e5244.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/user_sign_up.css">
+<link rel="stylesheet" href="/css/sell_product.css">
+<form class="container" action="/users/createPost" method="POST" enctype="multipart/form-data">
+    <h1>Enter Product Details</h1>
 
-
-<form class="detail flex " action="/users/createPost" method="POST" enctype="multipart/form-data">
-    <label for="basic-url" class="form-label my-1">Product Details</label>
-    <div class="row my-4">
-        <div class="col">
-            <input type="text" name="product_name" class="form-control" placeholder="Product name"
-                aria-label="product_name">
-        </div>
+    <div class="box box_sell">
+        <i class="fa fa-pencil"></i>
+        <input type="text" name="product_name" placeholder="Product Name">
     </div>
 
-    <div class="input-group mb-3 my-4">
-        <span class="input-group-text" id="basic-addon2">Product Type</span>
-        <!-- <input type="test" name="product_type" class="form-control" placeholder="Enter your product type"
-            aria-label="product_type" aria-describedby="basic-addon2"> -->
-
-            <select name="product_type">
-                <% var options = ["books","electronics","others"]; %>
-                <% for(var i = 0; i < 3; i++) { %>
-                  <option value='<%= options[i] %>'><%= options[i] %></option>
-                <% } %>
-              </select>
+    <div class="box box_sell">
+        <i class="fa fa-inr"></i>
+        <input type="text" name="product_price" placeholder="Product Price">
     </div>
 
-    
-    <div class="input-group mb-3 my-4">
-        <span class="input-group-text" id="basic-addon3">Product Price</span>
-        <input type="text" name="product_price" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    <div class="box box_sell">
+        <i class="fa fa-book"></i>
+        <select class="product_type_sell" name="product_type">
+            <% var options=["Select product type..","Books","Electronics","Others"]; %>
+                <% for(var i=0; i < 4; i++) { %>
+                    <option value='<%= options[i] %>'>
+                        <%= options[i] %>
+                    </option>
+                    <% } %>
+        </select>
     </div>
-
-    <div class="file-field input-field">
-        <div class="btn grey">
-            <span>File</span>
-            <input name="product_img" type="file" multiple>
-        </div>
+    <div class="attach_product_img">
+        <i class="fa fa-paperclip"></i>
+        <input name="product_img" type="file" multiple>
     </div>
-
-    
-    <button class="btn btn-secondary " type="submit">Submit</button>
+    <div class="sell_btn">
+        <input class="btn btn-light-blue btn-primary prop mb-2" type="submit" value="Sell Now!">
+    </div>
 </form>
-
-<%- include('_footer'); %>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
