@@ -60,7 +60,8 @@ module.exports.createPost = function (req, res) {
         .save()
         .then((data) => {
           console.log(data);
-          res.send("This item has been saved to database");
+          // res.send("This item has been saved to database");
+         return res.redirect('/users/profile');
         })
         .catch((err) => {
           res.status(400).send(err);
