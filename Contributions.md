@@ -16,6 +16,10 @@
 
 #### Github: https://github.com/abhinav5481
 
-#### Issue No. : #3 (Create whole backend for user while posting details of a product to sell.)
-
-#### Difficulty: Hard
+#### Issues Resolved:
+- #### Issue No. : #3 
+    - Description: Create whole backend for user while posting details of a product to sell.
+    - Difficulty: Hard
+- #### Issue No. : #4
+    - Description: Create a post form
+    - Difficulty: Easy
