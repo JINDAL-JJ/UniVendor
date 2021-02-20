@@ -16,8 +16,6 @@ module.exports.contactUs = function (req, res) {
 };
 
 module.exports.message = async function (req, res) {
- 
- 
   Message.create(req.body, async function (err, msg) {
     if (err) {
       req.flash('message',err);

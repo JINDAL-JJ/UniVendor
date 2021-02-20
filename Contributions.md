@@ -23,3 +23,6 @@
 - #### Issue No. : #4
     - Description: Create a post form
     - Difficulty: Easy
+- #### Issue No. : #2
+    - Description: Create a system for pop-up
+    - Difficulty: Medium
