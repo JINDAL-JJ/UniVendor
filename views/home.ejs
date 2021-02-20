@@ -1,4 +1,40 @@
 <link rel="stylesheet" href="/css/home.css">
+<script
+    type="text/javascript">window.setTimeout("document.getElementById('flash-messages').style.display='none';", 2000); </script>
+
+    <style>
+      
+      .alert-danger{
+          width: 50%;
+           text-align: center;
+           left: 25vw;
+      }
+  
+      .alert-success{
+          width: 50%;
+           text-align: center;
+           left: 25vw;
+      }
+      #flash-messages .alert {
+          margin-bottom: '0px';
+          position: absolute;
+          z-index: 1;
+       }
+  </style>
+
+    <% if (message !="" ) { %>
+      <div id="flash-messages">
+          <% if (message == "Signin Success" ) { %>
+              <div class="alert alert-success">
+                Signin Successful!
+              </div>
+              <% } else { %>
+                  <div class="alert alert-danger">
+                    <%= message %>
+                  </div>
+                  <% } %>
+      </div>
+      <% } %>
 
 
 <img src="../images/mainBg.jpeg" class="d-block w-100 container1" alt="..." style="height:450px; ">

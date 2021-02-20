@@ -10,8 +10,10 @@ const session = require("express-session");
 const passport = require("passport");
 const passportLocal = require("./config/passport-local");
 const dotenv = require("dotenv");
+const flash = require('connect-flash');
 //mongo store is being used to store session cookie in database
 const MongoStore = require("connect-mongo")(session);
+
 
 dotenv.config({ path: "./config.env" });
 
@@ -47,6 +49,9 @@ app.use(
     // })
   })
 );
+
+app.use(flash());
+
 
 //parth code  47 - 78
 // Set Storage engine

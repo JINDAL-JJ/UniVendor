@@ -7,6 +7,7 @@ const Product = require("../models/post");
 module.exports.profile = function (req, res) {
   return res.render("user_profile", {
     title: "User Profile",
+    message: req.flash('message')
   });
 };
 
@@ -15,8 +16,10 @@ module.exports.signIn = function (req, res) {
     return res.redirect("/users/profile");
   }
 
+  
   return res.render("user_sign_in", {
     title: "Sign In",
+    message: req.flash('message')
   });
 };
 
@@ -27,6 +30,7 @@ module.exports.signUp = function (req, res) {
 
   return res.render("user_sign_up", {
     title: "Sign Up",
+    message: req.flash('message')
   });
 };
 
@@ -38,6 +42,7 @@ module.exports.showProductSellForm = function (req, res) {
   }
   return res.render("sell_product", {
     title: "Sell product",
+    message: req.flash('message')
   });
 };
 
@@ -46,8 +51,10 @@ module.exports.createPost = function (req, res) {
   upload(req, res, (err) => {
     // console.log(req.files);
     if (req.files.length == 0) {
-      res.send("Please upload files");
-      return;
+      req.flash('message',"Please upload files");
+      // res.send("Please upload files");
+      return res.redirect("back");
+      // return;
     } else {
       const newProd = {
         product_name: req.body.product_name,
@@ -61,6 +68,7 @@ module.exports.createPost = function (req, res) {
         .then((data) => {
           console.log(data);
           // res.send("This item has been saved to database");
+          req.flash('message',"This item has been saved to database")
          return res.redirect('/users/profile');
         })
         .catch((err) => {
@@ -74,6 +82,7 @@ module.exports.create = function (req, res) {
   console.log(req.body);
   if (req.body.password != req.body.confirm_password) {
     console.log("password mismatch");
+    req.flash('message', 'password mismatch');
     return res.redirect("back");
   }
 
@@ -81,6 +90,7 @@ module.exports.create = function (req, res) {
     // console.log('going in db')
     if (err) {
       console.log("error in finding user in signing up");
+      req.flash('message', 'error in finding user in signing up');
       return;
     }
 
@@ -88,18 +98,21 @@ module.exports.create = function (req, res) {
       User.create(req.body, function (err, user) {
         if (err) {
           console.log("error in creating user while signing up");
+          req.flash('message', 'error in creating user while signing up');
           return;
         }
-
+        req.flash('message', 'Signup Success');
         return res.redirect("/users/sign-in");
       });
     } else {
+      req.flash('message', 'User Already Exists!');
       return res.redirect("back");
     }
   });
 };
 
 module.exports.createSession = function (req, res) {
+  req.flash('message','Signin Success');
   return res.redirect("/");
 };
 

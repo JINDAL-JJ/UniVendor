@@ -6,7 +6,38 @@
 <link rel="stylesheet" href="/css/user_sign_in.css">
 
 
+<script
+    type="text/javascript">window.setTimeout("document.getElementById('flash-messages').style.display='none';", 1000); </script>
+
+<style>
+    .alert-danger{
+        width: 50%;
+         text-align: center;
+    }
+
+    .alert-success{
+        width: 50%;
+         text-align: center;
+    }
+</style>
 <form class="container" action="/users/createSession" method="POST">
+
+    <% if (message !="" ) { %>
+        <div id="flash-messages">
+            <% if (message == "Signup Success" ) { %>
+                <div class="alert alert-success">
+                   You have successfully created your account. Please login now!
+                </div>
+                <% } else { %>
+                    <div class="alert alert-danger">
+                      Signin Unsuccessful, Please try again!
+                    </div>
+                    <% } %>
+        </div>
+        <% } %>
+
+
+
     <h1>Log In</h1>
     <div class="box">
         <i class="fa fa-envelope"></i>
