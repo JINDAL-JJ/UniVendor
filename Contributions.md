@@ -1,25 +1,39 @@
-## Contributors:
+# [Cross Winter Of Code](https://crosswoc.ieeedtu.in/)
 
-## 1.
+## Our Wonderful Contributors !!
 
-#### Name: Nirbhay Jain
+<table>
+<tr><th>Name</th><th>Github</th><th>Good First Issue (50) </th><th>Easy (100)</th><th>Medium (200)</th><th>Hard (500)</th><th>Total</th><tr>
+   
+<tr>
+   <td>Abhinav Agrawal</td>
+   <td><a href='https://github.com/abhinav5481'>abhinav5481</a></td>
+   <td></td>
+   <td>  
+      <ul>
+         <li><a href='https://github.com/JINDAL-JJ/UniVendor/pull/10'>#4</a></li>
+      </ul>
+   </td>
+   <td></td>
+   <td>
+      <ul>
+         <li><a href='https://github.com/JINDAL-JJ/UniVendor/pull/9'>#3</a></li>
+      </ul>
+   </td>
+   <td>600</td>
+</tr>
 
-#### Github: https://github.com/Nirbhay1910
-
-#### Issue No. : #1 (Setup nodemailer to confirm user about submission of query)
-
-#### Difficulty: medium
-
-## 2.
-
-#### Name: Abhinav Agrawal
-
-#### Github: https://github.com/abhinav5481
-
-#### Issues Resolved:
-- #### Issue No. : #3 
-    - Description: Create whole backend for user while posting details of a product to sell.
-    - Difficulty: Hard
-- #### Issue No. : #4
-    - Description: Create a post form
-    - Difficulty: Easy
+<tr>
+   <td> Nirbhay Jain</td>
+   <td> <a href=' https://github.com/Nirbhay1910'>Nirbhay1910</a></td>
+   <td></td>
+   <td></td>
+   <td>
+      <ul>
+        <li><a href='https://github.com/JINDAL-JJ/UniVendor/pull/6'>#1</a></li>
+      </ul>
+   </td>
+   <td></td>
+   <td>200</td>
+</tr>
+</table>
