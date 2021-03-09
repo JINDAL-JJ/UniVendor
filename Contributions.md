@@ -24,7 +24,7 @@
          <li><a href='https://github.com/JINDAL-JJ/UniVendor/pull/9'>#3</a></li>
       </ul>
    </td>
-   <td>600</td>
+   <td>800</td>
 </tr>
 
 <tr>
