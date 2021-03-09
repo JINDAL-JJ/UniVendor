@@ -52,6 +52,6 @@
    <td></td>
    <td></td>
    <td></td>
-   <td>200</td>
+   <td>100</td>
 </tr>
 </table>
